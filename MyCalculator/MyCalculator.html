@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  content="MyCalculator" author="ANubhav Srivastava">
+<title>Calculator</title>
+<div font-family:"Arial" align="center"  >
+<h1> Calculator</h1>
+</div>
+<script type="text/javascript">
+	function Operator(b,d){
+		     var b;
+		     var d;
+		     var c = b.slice(b.length-1);
+		     if(c!='+'&& c!='-'&& c!='*'&& c!= '/')
+		     	return d;
+		     else 
+		     	return '' ;
+			
+	}
+</script>
+
+
+<style type="text/css">
+    #d{
+        border:2px; height: auto
+    }
+    
+    h1{
+        color:burlywood;
+    }
+    form
+    {
+	margin: 0 auto;
+	width: 250px;
+    }
+    body{
+    	background-color:darkseagreen;
+        background-image: url("./img.jpg");
+            background-position: center center;
+        background-repeat: repeat;
+        align-content: center;
+        background-attachment:fixed;
+    }   
+.button {
+    background-color:darkcyan;
+    border-radius: : 12px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+#auth{color:brown;text-align: center;}
+
+
+</style>
+	
+</head>
+<body >
+	
+
+<form name="calc" > 
+
+<table  bgcolor="#e7e7e7" border="4" cellspacing="2">
+<input type="text" maxlength="40" name="field" id="d" size="40px" border="2px" >
+	<tr>
+	<td align="center"><input type="button" class="button" name="one" value="1" onclick="calc.field.value+='1'"></td>
+
+	<td ><input type="button" class="button" name="two" value="2" onclick="calc.field.value+='2'"></td>
+
+	<td><input type="button" class="button" name="three" value="3" onclick="calc.field.value+='3'"></td>
+
+	<td><input type="button"  class="button" name="reset" value="C  " onclick="calc.field.value=''"></td>
+	<tr>
+<tr>
+	<td><input type="button" class="button" name="four" value="4"onclick="calc.field.value+='4'"></td>
+	<td><input type="button" class="button" name="five" value="5"onclick="calc.field.value+='5'"></td>
+	<td><input type="button" class="button" name="six" value="6"onclick="calc.field.value+='6'"></td>
+	<td><input type="button" class="button" name="back" value="<="onclick="calc.field.value=calc.field.value.substr(0, calc.field.value.length - 1)"> </td>
+
+</tr>
+<tr>
+	<td><input type="button" class="button" name="seven" value="7"onclick="calc.field.value+='7'"></td>
+	<td><input type="button" class="button" name="eight" value="8"onclick="calc.field.value+='8'"></td>
+	<td><input type="button" class="button" name="nine" value="9"onclick="calc.field.value+='9'"></td>
+	<td><input type="button" class="button" name="plus" value="+  "onclick="calc.field.value+=Operator(calc.field.value , '+')"></td>
+</tr>
+	<tr>
+	<td><input type="button" class="button" name="mul" value="*"onclick="calc.field.value+=Operator(calc.field.value,'*')"></td>
+
+	<td><input type="button" class="button" name="div" value="/"onclick="calc.field.value+=Operator(calc.field.value,'/')"></td>
+
+	<td><input type="button" class="button" name="minus" value="- "onclick="calc.field.value+=Operator(calc.field.value,'-')"></td>
+
+	
+	<td ><input type="button" class="button" name="result" value="=  "onclick=" calc.field.value= eval(calc.field.value).toFixed(2)"></td>
+	<tr>	
+</table>	
+
+</form>
+<p id="auth"><span style="background-color:white">     Worked By: <a href="ANubhav" >ANubhav</a></span></p>
+</body>
+</html>
