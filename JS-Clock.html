@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Clock</title>
+	<script type="text/javascript">
+	function time1(){
+		var d= new Date();
+		var hh=d.getHours();
+		var mm=d.getMinutes();
+		var ss=d.getSeconds();
+		if (hh<=9) {hh="0"+hh;}
+			if (mm<=9) {mm="0"+mm;}
+				if (ss<=9) {ss="0"+ss;}
+				var x = hh+":"+mm+":"+ss;			
+				document.getElementById("fi").value = x;
+		}		
+		window.setInterval("time1()",1000);
+
+	
+	
+	</script>
+
+<style type="text/css">
+	table{border: 2px solid; border-radius:25px; }
+	td{font-size: 20px; font-family: arial;}
+	body{
+		background-image: url("./imgi.jpg");
+	background-position: center center;
+        background-repeat: repeat;
+        align-content: center;
+        background-attachment:fixed;
+        background-color: cyan;
+	}
+</style>	
+</head>
+<body align="center">
+
+<table align="center" name=table >
+	
+<h1>Current Time </h1>
+<tr><td>Real Time:</td>
+<td name="td">
+<input type="text" name="field"  id="fi"  size="40px" >
+</td></tr>
+</table>
+
+
+</body>
+</html>

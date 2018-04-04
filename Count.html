@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+<script type="text/javascript">
+	
+function countE( ) {
+
+	var phrase= prompt("What Would You like to Examine");
+	if (typeof(phrase) !="string") 
+	{
+
+		alert("Wrong Input Pls Try Again");
+		return false;
+	}
+else{
+	var eCount=0;
+	for(var index=0; index <=phrase.length;index++)
+	{
+		if (phrase.charAt(index)=='e' || phrase.charAt(index)=="E") 
+		{
+			eCount++;
+			
+		}
+	}
+alert("wow"+eCount+);
+return true;
+}
+}
+</script>
+</head>
+<body>
+<p>Hey! You Got It.</p>
+
+</body>
+</html>
